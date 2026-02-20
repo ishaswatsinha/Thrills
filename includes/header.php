@@ -31,15 +31,23 @@
 <a href="<?= BASE_URL ?>">Thrills<span>Tech</span></a>
 </div>
 
-<nav>
-<ul>
-<li><a href="<?= BASE_URL ?>">Home</a></li>
-<li><a href="<?= BASE_URL ?>about.php">About</a></li>
-<li><a href="<?= BASE_URL ?>services.php">Services</a></li>
-<li><a href="<?= BASE_URL ?>case-studies.php">Work</a></li>
-<li><a href="<?= BASE_URL ?>contact.php" class="btn-nav">Contact</a></li>
-</ul>
+<div class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<nav class="nav-menu">
+  <ul>
+    <li><a href="<?= BASE_URL ?>">Home</a></li>
+    <li><a href="<?= BASE_URL ?>about.php">About</a></li>
+    <li><a href="<?= BASE_URL ?>services.php">Services</a></li>
+    <li><a href="<?= BASE_URL ?>case-studies.php">Work</a></li>
+    <li><a href="<?= BASE_URL ?>contact.php" class="btn-nav">Contact</a></li>
+  </ul>
 </nav>
+
+<div class="menu-overlay"></div>
 
 </div>
 </header>

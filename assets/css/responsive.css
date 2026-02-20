@@ -1,28 +1,168 @@
-@media (max-width: 1024px) {
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* =========================
+   TABLET (<=1024px)
+========================= */
 
-  h1 {
+@media (max-width: 1024px) {
+
+  .hero-title {
     font-size: 48px;
   }
+
+  .stats-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
 }
 
-@media (max-width: 600px) {
+/* =========================
+   MOBILE (<=768px)
+========================= */
 
-  nav ul {
-    display: none;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 36px;
-  }
+@media (max-width: 768px) {
 
   section {
     padding: 80px 0;
   }
+
+  .container {
+    width: 92%;
+  }
+
+ /* =========================
+   PREMIUM MOBILE NAV
+========================= */
+
+.menu-toggle {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-toggle span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--text-primary);
+  left: 0;
+  transition: 0.4s ease;
+}
+
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 9px; }
+.menu-toggle span:nth-child(3) { bottom: 0; }
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 10px;
+}
+
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 900;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Slide Menu */
+.nav-menu ul {
+  transition: 0.4s ease;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(17,24,39,0.95);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 120px 40px;
+    gap: 30px;
+    transition: 0.4s ease;
+    z-index: 1000;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+}
+
+  /* HERO */
+
+  .hero {
+    height: auto;
+    padding-top: 120px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE (<=480px)
+========================= */
+
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .stat h3 {
+    font-size: 36px;
+  }
+
 }

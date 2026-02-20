@@ -101,6 +101,12 @@ nav a:hover {
   color: #fff !important;
 }
 
+/* Hide Toggle on Desktop */
+.menu-toggle {
+  display: none;
+  color: var(--text-primary);
+}
+
 /* =========================
    HERO
 ========================= */
@@ -243,4 +249,29 @@ nav a:hover {
   transform-origin: top;
 
   pointer-events: none;
+}
+
+/* =========================
+   CURSOR TRANSITION
+========================= */
+.cursor, .cursor-follower {
+position: fixed;
+top: 0;
+left: 0;
+pointer-events: none;
+border-radius: 50%;
+z-index: 9999;
+}
+
+.cursor {
+width: 8px;
+height: 8px;
+background: #3B82F6;
+}
+
+.cursor-follower {
+width: 40px;
+height: 40px;
+border: 1px solid #3B82F6;
+transition: 0.15s ease-out;
 }
