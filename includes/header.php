@@ -17,7 +17,8 @@
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
+<!-- Lenis Smooth Scroll -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
 </head>
 
 <body>
@@ -28,7 +29,8 @@
 <div class="container nav-wrapper">
 
 <div class="logo">
-<a href="<?= BASE_URL ?>">Thrills<span>Tech</span></a>
+<!-- <a href="<?= BASE_URL ?>">Thrills<span>Tech</span></a> -->
+ <img src="https://thrillstechnologies.in/assets/img/thrills-logo.png" alt="logo" width="80px"">
 </div>
 
 <div class="menu-toggle">

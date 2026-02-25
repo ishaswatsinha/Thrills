@@ -1,26 +1,59 @@
-document.addEventListener("DOMContentLoaded", function () {
+// ==============================
+// GLOBAL SCROLL SYSTEM
+// ==============================
 
 gsap.registerPlugin(ScrollTrigger);
 
-// PAGE LOAD TRANSITION
-window.addEventListener("load", function () {
+// Sync GSAP with Lenis
+if (typeof lenis !== "undefined") {
+  lenis.on("scroll", ScrollTrigger.update);
+}
 
-  const transition = document.querySelector(".page-transition");
+ScrollTrigger.defaults({
+  toggleActions: "play none none reverse"
+});
 
-  if (!transition) return;
+// ==============================
+// PAGE LOAD REVEAL
+// ==============================
 
-  gsap.to(transition, {
+window.addEventListener("load", () => {
+
+  gsap.to(".page-transition", {
     scaleY: 0,
-    duration: 1,
-    ease: "power4.out"
+    duration: 1.2,
+    ease: "power4.inOut",
+    transformOrigin: "top"
   });
 
 });
 
-/* Floating Orbs */
+// ==============================
+// HERO ANIMATION
+// ==============================
+
+gsap.timeline()
+.from(".hero-title", {
+  y: 80,
+  opacity: 0,
+  duration: 1,
+  ease: "power4.out"
+})
+.from(".hero-subtitle", {
+  y: 40,
+  opacity: 0,
+  duration: 0.8
+}, "-=0.6")
+.from(".hero-buttons a", {
+  y: 20,
+  opacity: 0,
+  stagger: 0.2,
+  duration: 0.6
+}, "-=0.4");
+
+// Subtle floating orbs motion
 gsap.to(".orb1", {
-  y: 60,
-  x: 40,
+  y: 40,
   duration: 6,
   repeat: -1,
   yoyo: true,
@@ -28,56 +61,79 @@ gsap.to(".orb1", {
 });
 
 gsap.to(".orb2", {
-  y: -60,
-  x: -40,
+  y: -40,
   duration: 8,
   repeat: -1,
   yoyo: true,
   ease: "sine.inOut"
 });
 
-/* Split Text */
-const splitText = document.querySelector(".split-text");
-if (splitText) {
-  const chars = splitText.textContent.split("");
-  splitText.innerHTML = chars.map(char =>
-    `<span class="char">${char === " " ? "&nbsp;" : char}</span>`
-  ).join("");
+// ==============================
+// GENERIC SECTION REVEAL SYSTEM
+// ==============================
 
-  gsap.from(".char", {
-    y: 100,
-    opacity: 0,
-    stagger: 0.02,
-    duration: 1.2,
-    ease: "power4.out"
-  });
-}
+gsap.utils.toArray("section").forEach(section => {
 
-/* Counter */
+  if (!section.classList.contains("hero")) {
+
+    gsap.from(section.querySelectorAll("h2, p"), {
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%"
+      },
+      y: 60,
+      opacity: 0,
+      stagger: 0.2,
+      duration: 1
+    });
+
+  }
+
+});
+
+// ==============================
+// COUNTER ANIMATION
+// ==============================
+
 gsap.utils.toArray(".counter").forEach(counter => {
+
   let target = +counter.getAttribute("data-target");
+
   gsap.to(counter, {
     innerText: target,
     duration: 2,
+    ease: "power2.out",
     snap: { innerText: 1 },
     scrollTrigger: {
       trigger: counter,
-      start: "top 80%"
+      start: "top 85%"
     }
   });
+
 });
 
-/* Scroll Reveal */
-gsap.utils.toArray("section").forEach(section => {
-  gsap.from(section, {
-    scrollTrigger: {
-      trigger: section,
-      start: "top 80%"
-    },
-    y: 80,
-    opacity: 0,
-    duration: 1.2
-  });
+
+// ==============================
+// ABOUT ANIMATION
+// ==============================
+
+gsap.from(".about-left", {
+  scrollTrigger: {
+    trigger: ".about-modern",
+    start: "top 80%"
+  },
+  x: -100,
+  opacity: 0,
+  duration: 1
 });
 
+gsap.from(".timeline-item", {
+  scrollTrigger: {
+    trigger: ".about-modern",
+    start: "top 70%"
+  },
+  y: 60,
+  opacity: 0,
+  stagger: 0.3,
+  duration: 1
 });

@@ -13,8 +13,8 @@ include 'includes/header.php';
 
 <div class="container hero-content">
 
-<h1 class="hero-title split-text">
-We Build Digital Growth Engines
+<h1 class="hero-title">
+  We Build <span id="typed-text"></span><span class="cursor-typing">|</span>
 </h1>
 
 <p class="hero-subtitle">
@@ -56,4 +56,74 @@ AI-powered marketing & intelligent web systems that scale brands globally.
 </div>
 </section>
 
+<section class="about-modern">
+
+  <div class="container about-modern-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="about-left">
+
+      <span class="about-label">
+        <span class="dot"></span> About Thrills Technologies
+      </span>
+  
+      <h2 class="about-heading-modern">
+        Your <span class="highlight">Partner</span><br>
+        in Digital Transformation  <br>
+        and Innovation
+      </h2>
+
+      <a href="about.php" class="btn-primary about-btn">
+        More About
+      </a>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="about-right">
+
+      <div class="timeline">
+
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Your Success, Our Mission</h3>
+            <p>
+              We define our success by the success of our clients. We deliver
+              impactful digital solutions that drive meaningful growth.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Creators Of Digital Excellence</h3>
+            <p>
+              Excellence and creativity are at the heart of everything we do.
+              We craft tailored digital solutions that elevate your brand.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Innovating The Digital Landscape</h3>
+            <p>
+              Driven by passion for creativity and technology, we reshape how
+              brands connect with audiences.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 <?php include 'includes/footer.php'; ?>
