@@ -58,6 +58,7 @@ AI-powered marketing & intelligent web systems that scale brands globally.
 
 <section class="about-modern">
 
+<div class="bg-3d-shape"></div>
   <div class="container about-modern-wrapper">
 
     <!-- LEFT SIDE -->
@@ -119,6 +120,123 @@ AI-powered marketing & intelligent web systems that scale brands globally.
           </div>
         </div>
 
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services-v2">
+
+  <div class="services-bg"></div>
+
+  <div class="container">
+
+    <!-- HEADER ROW -->
+    <div class="services-top">
+
+      <div class="services-left">
+        <span class="services-label">
+          <span class="dot"></span> OUR SERVICES
+        </span>
+
+        <h2>
+          Digital Solutions by <span class="highlight">Thrills</span>
+          to Elevate Your Brand
+        </h2>
+      </div>
+
+      <div class="services-right">
+        <p>
+          We empower businesses with AI-driven strategies and
+          scalable digital systems built for measurable growth.
+        </p>
+
+        <a href="services.php" class="services-btn">
+          All Services
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- CARDS GRID -->
+    <div class="services-grid-v2">
+
+      <div class="service-card-v2">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" class="icon-svg">
+            <circle cx="12" cy="12" r="8"/>
+            <path d="M12 6v6l4 4"/>
+          </svg>
+        </div>
+        <h3>Artificial Intelligence</h3>
+        <p>Boost your growth with AI-powered data campaigns and conversion funnels.</p>
+        <div class="card-arrow">↗</div>
+      </div>
+
+      <div class="service-card-v2">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" class="icon-svg">
+            <rect x="4" y="4" width="16" height="16" rx="3"/>
+            <path d="M4 9h16"/>
+          </svg>
+        </div>
+        <h3>SEO & GEO Optimization</h3>
+        <p>Rank higher across search engines and AI-driven answer platforms.</p>
+        <div class="card-arrow">↗</div>
+      </div>
+
+      <div class="service-card-v2">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" class="icon-svg">
+            <path d="M4 12h16"/>
+            <path d="M12 4v16"/>
+          </svg>
+        </div>
+        <h3>Web Development</h3>
+        <p>Scalable high-performance websites engineered for speed and ROI.</p>
+        <div class="card-arrow">↗</div>
+      </div>
+
+      <!-- -------------------------------------------- -->
+
+      <div class="service-card-v2">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" class="icon-svg">
+            <path d="M4 12h16"/>
+            <path d="M12 4v16"/>
+          </svg>
+        </div>
+        <h3>Digital Marketing</h3>
+        <p>Build and expand your brand’s online presence with data-driven digital marketing strategies. </p>
+        <div class="card-arrow">↗</div>
+      </div>
+      <div class="service-card-v2">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" class="icon-svg">
+            <path d="M4 12h16"/>
+            <path d="M12 4v16"/>
+          </svg>
+        </div>
+        <h3>Digital Transformation</h3>
+        <p>We help businesses evolve in the digital age through process automation, cloud migration, IoT integration...</p>
+        <div class="card-arrow">↗</div>
+      </div>
+      <div class="service-card-v2">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" class="icon-svg">
+            <path d="M4 12h16"/>
+            <path d="M12 4v16"/>
+          </svg>
+        </div>
+        <h3>Media Production</h3>
+        <p>Bring your brand to life through dynamic media content. We specialize in video production, animation, photography...</p>
+        <div class="card-arrow">↗</div>
       </div>
 
     </div>

@@ -137,3 +137,25 @@ gsap.from(".timeline-item", {
   stagger: 0.3,
   duration: 1
 });
+
+
+
+// ===============================
+// SERVICES ANIMATION
+// ===============================
+
+gsap.utils.toArray(".service-card-v2").forEach((card) => {
+
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 85%",
+      toggleActions: "play none none reverse"
+    },
+    y: 60,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power3.out"
+  });
+
+});

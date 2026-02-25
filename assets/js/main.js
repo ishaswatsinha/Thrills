@@ -106,3 +106,75 @@ document.addEventListener("DOMContentLoaded", function () {
   typeEffect();
 
 });
+
+
+/* ===============================
+   3D MOUSE PARALLAX
+================================ */
+
+const section = document.querySelector(".about-modern");
+const blob = document.querySelector(".bg-3d-shape");
+
+let mouseX = 0;
+let mouseY = 0;
+let currentX = 0;
+let currentY = 0;
+
+section.addEventListener("mousemove", (e) => {
+
+  const rect = section.getBoundingClientRect();
+
+  mouseX = (e.clientX - rect.left - rect.width / 2) / rect.width;
+  mouseY = (e.clientY - rect.top - rect.height / 2) / rect.height;
+
+});
+
+function animateBlob() {
+
+  // Smooth interpolation (makes it premium smooth)
+  currentX += (mouseX - currentX) * 0.08;
+  currentY += (mouseY - currentY) * 0.08;
+
+  blob.style.transform = `
+    translate(-50%, -50%)
+    rotateY(${currentX * 20}deg)
+    rotateX(${currentY * -20}deg)
+    translateX(${currentX * 40}px)
+    translateY(${currentY * 40}px)
+  `;
+
+  requestAnimationFrame(animateBlob);
+}
+
+animateBlob();
+
+
+/* ===============================
+   SERVICE CARD 3D TILT
+================================ */
+
+const cards = document.querySelectorAll(".service-card");
+
+cards.forEach(card => {
+
+  card.addEventListener("mousemove", (e) => {
+
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = (y - centerY) / 15;
+    const rotateY = (centerX - x) / 15;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateX(0) rotateY(0)";
+  });
+
+});
