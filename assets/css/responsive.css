@@ -169,5 +169,107 @@
 
 
 
+/* ========================================
+   CAPABILITIES SECTION - MOBILE RESPONSIVE
+======================================== */
 
+@media (max-width: 992px) {
+
+  .capabilities-section {
+    padding: 100px 0;
+  }
+
+  .cap-container {
+    width: 92%;
+    padding: 50px 30px;
+    border-radius: 28px;
+  }
+
+  /* Header layout stack */
+  .cap-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .cap-title {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .cap-sub {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  /* Circle smaller */
+  .cap-circle {
+    width: 130px;
+    height: 130px;
+    align-self: flex-start;
+  }
+
+  .circle-arrow {
+    width: 22px;
+    height: 22px;
+  }
+
+  .circle-arrow::before {
+    width: 22px;
+  }
+
+  .circle-arrow::after {
+    height: 22px;
+  }
+
+  /* Marquee spacing */
+  .cap-marquee {
+    margin-top: 50px;
+  }
+
+  .cap-track {
+    gap: 18px;
+    padding: 20px 10px;
+  }
+
+  .cap-card {
+    width: 150px;
+    height: 80px;
+    border-radius: 16px;
+  }
+
+  .cap-card img {
+    max-width: 65%;
+  }
+
+}
+
+
+/* Extra small devices */
+
+@media (max-width: 576px) {
+
+  .cap-container {
+    padding: 40px 20px;
+  }
+
+  .cap-title {
+    font-size: 22px;
+  }
+
+  .cap-sub {
+    font-size: 13px;
+  }
+
+  .cap-circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .cap-card {
+    width: 130px;
+    height: 70px;
+  }
+
+}
 

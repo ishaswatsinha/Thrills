@@ -84,33 +84,33 @@ document.addEventListener("DOMContentLoaded", function () {
      SERVICE CARD 3D TILT
   ================================================== */
 
-  const serviceCards = document.querySelectorAll(".service-card");
+  // const serviceCards = document.querySelectorAll(".service-card");
 
-  serviceCards.forEach(card => {
+  // serviceCards.forEach(card => {
 
-    card.addEventListener("mousemove", (e) => {
+  //   card.addEventListener("mousemove", (e) => {
 
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+  //     const rect = card.getBoundingClientRect();
+  //     const x = e.clientX - rect.left;
+  //     const y = e.clientY - rect.top;
 
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
+  //     const centerX = rect.width / 2;
+  //     const centerY = rect.height / 2;
 
-      const rotateX = (y - centerY) / 18;
-      const rotateY = (centerX - x) / 18;
+  //     const rotateX = (y - centerY) / 18;
+  //     const rotateY = (centerX - x) / 18;
 
-      card.style.transform =
-        `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  //     card.style.transform =
+  //       `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-    });
+  //   });
 
-    card.addEventListener("mouseleave", () => {
-      card.style.transform =
-        "perspective(1000px) rotateX(0deg) rotateY(0deg)";
-    });
+  //   card.addEventListener("mouseleave", () => {
+  //     card.style.transform =
+  //       "perspective(1000px) rotateX(0deg) rotateY(0deg)";
+  //   });
 
-  });
+  // });
 
 
   /* ==================================================
@@ -148,53 +148,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* ==================================================
-   SERVICES MARQUEE
+   Industries We Serve - Scroll Animations
 ================================================== */
+
 
 window.addEventListener("load", () => {
 
-  const marqueeTrack = document.querySelector(".marquee-track");
-  if (!marqueeTrack) return;
+  const track = document.querySelector(".marquee-track");
+  if (!track) return;
 
-  const items = Array.from(marqueeTrack.children);
-  items.forEach(item => marqueeTrack.appendChild(item.cloneNode(true)));
+  // Duplicate cards once
+  const originalCards = Array.from(track.children);
+  originalCards.forEach(card => {
+    track.appendChild(card.cloneNode(true));
+  });
 
-  const marqueeTween = gsap.to(marqueeTrack, {
+  // Create tween
+  const tween = gsap.to(track, {
     xPercent: -50,
-    duration: 30,
-    ease: "linear",
+    duration: 25,
+    ease: "none",
     repeat: -1
   });
 
-  document.querySelectorAll(".marquee-card").forEach(card => {
-    card.addEventListener("mouseenter", () => marqueeTween.pause());
-    card.addEventListener("mouseleave", () => marqueeTween.resume());
+  // IMPORTANT: Attach hover AFTER duplication
+  const allCards = document.querySelectorAll(".marquee-card");
+
+  allCards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+      tween.pause();
+    });
+
+    card.addEventListener("mouseleave", () => {
+      tween.resume();
+    });
+
   });
 
 });
-
-
 
 /* ==================================================
    LOGO MARQUEE
 ================================================== */
 
-window.addEventListener("load", () => {
+// window.addEventListener("load", () => {
 
-  const track = document.querySelector(".logo-track");
-  if (!track) return;
+//   const track = document.querySelector(".logo-track");
+//   if (!track) return;
 
-  const logos = Array.from(track.children);
-  logos.forEach(logo => track.appendChild(logo.cloneNode(true)));
+//   const logos = Array.from(track.children);
+//   logos.forEach(logo => track.appendChild(logo.cloneNode(true)));
 
-  gsap.to(track, {
-    xPercent: -50,
-    duration: 25,
-    ease: "linear",
-    repeat: -1
-  });
+//   gsap.to(track, {
+//     xPercent: -50,
+//     duration: 25,
+//     ease: "linear",
+//     repeat: -1
+//   });
 
-});
+// });
 
 
 /* ==================================================

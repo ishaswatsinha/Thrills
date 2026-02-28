@@ -24,46 +24,37 @@ window.addEventListener("load", () => {
 });
 
 // ==============================
-// HERO ANIMATION
+// HERO ANIMATION 
 // ==============================
 
-gsap.timeline()
-.from(".hero-title", {
-  y: 80,
-  opacity: 0,
-  duration: 1,
-  ease: "power4.out",
-  force3D: true
-})
-.from(".hero-subtitle", {
-  y: 40,
-  opacity: 0,
-  duration: 0.8
-}, "-=0.6")
-.from(".hero-buttons a", {
-  y: 20,
-  opacity: 0,
-  stagger: 0.2,
-  duration: 0.6
-}, "-=0.4");
+document.addEventListener("DOMContentLoaded", () => {
 
-// Floating Orbs (GPU accelerated)
-gsap.to(".orb1", {
-  y: 40,
-  duration: 6,
-  repeat: -1,
-  yoyo: true,
-  ease: "sine.inOut",
-  force3D: true
-});
+  const heroTimeline = gsap.timeline({
+    defaults: { ease: "power3.out" }
+  });
 
-gsap.to(".orb2", {
-  y: -40,
-  duration: 8,
-  repeat: -1,
-  yoyo: true,
-  ease: "sine.inOut",
-  force3D: true
+  heroTimeline
+    .from(".hero-title", {
+      y: 80,
+      opacity: 0,
+      duration: 1,
+      force3D: true,
+      clearProps: "all"
+    })
+    .from(".hero-subtitle", {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      clearProps: "all"
+    }, "-=0.6")
+    .from(".hero-buttons a", {
+      y: 20,
+      opacity: 0,
+      stagger: 0.2,
+      duration: 0.6,
+      clearProps: "all" // IMPORTANT: prevents hidden buttons
+    }, "-=0.4");
+
 });
 
 // ==============================
@@ -212,9 +203,7 @@ gsap.utils.toArray(".service-card-v2").forEach((card) => {
 /* ===============================================
    WHY THRILLS ANIMATION
 =============================================== */
-/* ===============================================
-   WHY AI SAFE ANIMATION (NO HIDE BUG)
-=============================================== */
+
 
 gsap.registerPlugin(ScrollTrigger);
 
