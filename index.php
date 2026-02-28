@@ -457,4 +457,65 @@ include 'includes/header.php';
 
   </div>
 </section>
+
+<section class="why-ai">
+
+  <!-- 3D BACKGROUND OBJECTS -->
+  <div class="ai-objects">
+    <img src="assets/images/about_3_1.png" class="mesh mesh-1" alt="">
+    <img src="assets/images/about_3_1.png" class="mesh mesh-2" alt="">
+  </div>
+
+  <div class="container why-ai-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="why-ai-left">
+
+      <span class="why-label">
+        <span class="dot"></span> WHY CHOOSE THRILLS
+      </span>
+        <h2 class="why-ai-title">
+        AI-Powered <br><span>Growth Systems</span><br>
+        Built For The Future
+      </h2>
+
+      
+      
+
+      <div class="why-ai-cards">
+
+        <div class="why-ai-card">
+          <h3>AI-Led Strategy</h3>
+          <p>Smart automation systems that maximize ROI and scale faster.</p>
+        </div>
+
+        <div class="why-ai-card">
+          <h3>High-Speed Execution</h3>
+          <p>Performance-first digital infrastructure engineered to convert.</p>
+        </div>
+
+        <div class="why-ai-card">
+          <h3>Transparent Results</h3>
+          <p>Clear metrics, dashboards, and measurable KPIs.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+     
+    <div class="why-ai-right">
+      <p class="why-ai-desc">
+        We architect intelligent marketing engines and high-performance
+        digital platforms designed to accelerate measurable growth.
+      </p>
+      <div class="why-ai-image">
+        <img src="assets/images/about_3_1.png" alt="">
+      </div>
+    </div>
+
+  </div>
+
+</section>
 <?php include 'includes/footer.php'; ?>

@@ -206,3 +206,48 @@ gsap.utils.toArray(".service-card-v2").forEach((card) => {
   });
 
 })();
+
+
+
+/* ===============================================
+   WHY THRILLS ANIMATION
+=============================================== */
+/* ===============================================
+   WHY AI SAFE ANIMATION (NO HIDE BUG)
+=============================================== */
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".why-ai-left > *").forEach((el, i) => {
+
+  gsap.fromTo(el,
+    { y: 40, autoAlpha: 0 },
+    {
+      y: 0,
+      autoAlpha: 1,
+      duration: 0.8,
+      delay: i * 0.1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".why-ai",
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      }
+    }
+  );
+
+});
+
+gsap.fromTo(".why-ai-image",
+  { x: 80, autoAlpha: 0 },
+  {
+    x: 0,
+    autoAlpha: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".why-ai",
+      start: "top 80%"
+    }
+  }
+);
