@@ -167,6 +167,88 @@
 
 }
 
+/* =====================================
+   EXPERTISE SECTION - MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 992px) {
+
+  .expertise-container {
+    grid-template-columns: 1fr;   /* stack layout */
+    gap: 50px;
+    padding: 60px 35px;
+  }
+
+  /* Remove vertical divider */
+  .expertise-divider {
+    display: none;
+  }
+
+  /* Left Section */
+  .expertise-left h2 {
+    font-size: 30px;
+    line-height: 1.4;
+  }
+
+  /* Stats stack nicely */
+  .expertise-stats {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .stat h3 {
+    font-size: 28px;
+  }
+
+  .stat p {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  /* Right Section */
+  .expertise-item {
+    margin-bottom: 30px;
+  }
+
+  .expertise-item h4 {
+    font-size: 16px;
+  }
+
+  .expertise-item p {
+    font-size: 13px;
+  }
+}
+
+/* =====================================
+   SMALL DEVICES (Extra Clean)
+===================================== */
+
+@media (max-width: 576px) {
+
+  .expertise-section {
+    padding: 100px 0;
+  }
+
+  .expertise-container {
+    width: 92%;
+    padding: 45px 25px;
+    border-radius: 25px;
+  }
+
+  .expertise-left h2 {
+    font-size: 24px;
+  }
+
+  .stat h3 {
+    font-size: 24px;
+  }
+
+  .expertise-item h4 span {
+    font-size: 18px;
+  }
+}
+
 
 
 /* ========================================

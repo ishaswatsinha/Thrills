@@ -19,6 +19,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <!-- Lenis Smooth Scroll -->
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+<!-- Font Awesome  -->
+ <script src="https://kit.fontawesome.com/743643a49a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>

@@ -349,105 +349,105 @@ include 'includes/header.php';
       <div class="marquee-track">
 
         <!-- Cards Here -->
-          <div class="marquee-card">
+        <div class="marquee-card">
 
-        <div class="card-logo">
-          <img src="assets/images/service1.png" alt="Service Logo">
+          <div class="card-logo">
+            <img src="assets/images/service1.png" alt="Service Logo">
+          </div>
+
+          <div class="card-content">
+            <h3>AI Automation</h3>
+            <p>Smart workflow systems powered by artificial intelligence.</p>
+          </div>
+
+          <div class="card-arrow">↗</div>
+
         </div>
 
-        <div class="card-content">
-          <h3>AI Automation</h3>
-          <p>Smart workflow systems powered by artificial intelligence.</p>
+        <div class="marquee-card">
+
+          <div class="card-logo">
+            <img src="assets/images/service1.png" alt="Service Logo">
+          </div>
+
+          <div class="card-content">
+            <h3>AI Automation</h3>
+            <p>Smart workflow systems powered by artificial intelligence.</p>
+          </div>
+
+          <div class="card-arrow">↗</div>
+
         </div>
+        <div class="marquee-card">
 
-        <div class="card-arrow">↗</div>
+          <div class="card-logo">
+            <img src="assets/images/service1.png" alt="Service Logo">
+          </div>
 
-      </div>
+          <div class="card-content">
+            <h3>AI Automation</h3>
+            <p>Smart workflow systems powered by artificial intelligence.</p>
+          </div>
 
-      <div class="marquee-card">
+          <div class="card-arrow">↗</div>
 
-        <div class="card-logo">
-          <img src="assets/images/service1.png" alt="Service Logo">
         </div>
+        <div class="marquee-card">
 
-        <div class="card-content">
-          <h3>AI Automation</h3>
-          <p>Smart workflow systems powered by artificial intelligence.</p>
+          <div class="card-logo">
+            <img src="assets/images/service1.png" alt="Service Logo">
+          </div>
+
+          <div class="card-content">
+            <h3>AI Automation</h3>
+            <p>Smart workflow systems powered by artificial intelligence.</p>
+          </div>
+
+          <div class="card-arrow">↗</div>
+
         </div>
+        <div class="marquee-card">
 
-        <div class="card-arrow">↗</div>
+          <div class="card-logo">
+            <img src="assets/images/service1.png" alt="Service Logo">
+          </div>
 
-      </div>
-      <div class="marquee-card">
+          <div class="card-content">
+            <h3>AI Automation</h3>
+            <p>Smart workflow systems powered by artificial intelligence.</p>
+          </div>
 
-        <div class="card-logo">
-          <img src="assets/images/service1.png" alt="Service Logo">
+          <div class="card-arrow">↗</div>
+
         </div>
+        <div class="marquee-card">
 
-        <div class="card-content">
-          <h3>AI Automation</h3>
-          <p>Smart workflow systems powered by artificial intelligence.</p>
+          <div class="card-logo">
+            <img src="assets/images/service1.png" alt="Service Logo">
+          </div>
+
+          <div class="card-content">
+            <h3>AI Automation</h3>
+            <p>Smart workflow systems powered by artificial intelligence.</p>
+          </div>
+
+          <div class="card-arrow">↗</div>
+
         </div>
+        <div class="marquee-card">
 
-        <div class="card-arrow">↗</div>
+          <div class="card-logo">
+            <img src="assets/images/service1.png" alt="Service Logo">
+          </div>
 
-      </div>
-      <div class="marquee-card">
+          <div class="card-content">
+            <h3>AI Automation</h3>
+            <p>Smart workflow systems powered by artificial intelligence.</p>
+          </div>
 
-        <div class="card-logo">
-          <img src="assets/images/service1.png" alt="Service Logo">
+          <div class="card-arrow">↗</div>
+
         </div>
-
-        <div class="card-content">
-          <h3>AI Automation</h3>
-          <p>Smart workflow systems powered by artificial intelligence.</p>
-        </div>
-
-        <div class="card-arrow">↗</div>
-
-      </div>
-      <div class="marquee-card">
-
-        <div class="card-logo">
-          <img src="assets/images/service1.png" alt="Service Logo">
-        </div>
-
-        <div class="card-content">
-          <h3>AI Automation</h3>
-          <p>Smart workflow systems powered by artificial intelligence.</p>
-        </div>
-
-        <div class="card-arrow">↗</div>
-
-      </div>
-      <div class="marquee-card">
-
-        <div class="card-logo">
-          <img src="assets/images/service1.png" alt="Service Logo">
-        </div>
-
-        <div class="card-content">
-          <h3>AI Automation</h3>
-          <p>Smart workflow systems powered by artificial intelligence.</p>
-        </div>
-
-        <div class="card-arrow">↗</div>
-
-      </div>
-      <div class="marquee-card">
-
-        <div class="card-logo">
-          <img src="assets/images/service1.png" alt="Service Logo">
-        </div>
-
-        <div class="card-content">
-          <h3>AI Automation</h3>
-          <p>Smart workflow systems powered by artificial intelligence.</p>
-        </div>
-
-        <div class="card-arrow">↗</div>
-
-      </div>
 
       </div>
     </div>
@@ -506,7 +506,7 @@ include 'includes/header.php';
 
 </section>
 
- <!-- ================= CAPABILITIES SECTION ================= -->
+<!-- ================= CAPABILITIES SECTION ================= -->
 <section class="capabilities-section">
 
   <!-- Red ambient glow -->
@@ -564,7 +564,7 @@ include 'includes/header.php';
   </div>
 </section>
 
- <!-- ================= WHY CHOOSE THRILLS ================= -->
+<!-- ================= WHY CHOOSE THRILLS ================= -->
 <section class="why-ai">
 
   <!-- 3D BACKGROUND OBJECTS -->
@@ -626,7 +626,7 @@ include 'includes/header.php';
 
 </section>
 
- <!-- ================= Thrills Process Section ================= -->
+<!-- ================= Thrills Process Section ================= -->
 
 <section class="thrills-process">
 
@@ -726,5 +726,90 @@ include 'includes/header.php';
 
   </div>
 </section>
+
+<!-- ================= Thrills Joins Section ================= -->
+
+<section class="thrills-join">
+
+  <div class="join-container">
+
+    <!-- Header -->
+    <div class="join-header">
+
+      <div class="join-left">
+        <span class="join-label">
+          <span class="dot"></span> JOIN THRILLS
+        </span>
+
+        <h2>
+          Join our <span>Thrills</span> community
+          of digital innovators
+        </h2>
+      </div>
+
+      <div class="join-right">
+        <p>
+          Become part of Thrills Technologies and collaborate
+          with passionate creators building AI-driven digital systems
+          for the future.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Social Cards -->
+    <div class="join-socials">
+
+      <div class="social-card">
+        <div class="social-icon"><i class="fa-brands fa-facebook-f"></i></div>
+        <div class="card-mid">
+          <div class="social-content">
+            <h3>Facebook</h3>
+            <p>@thrillstech</p>
+          </div>
+          <div class="social-arrow">↗</div>
+        </div>
+
+      </div>
+
+      <div class="social-card">
+        <div class="social-icon"><i class="fa-brands fa-instagram"></i></div>
+                <div class="card-mid">
+
+        <div class="social-content">
+          <h3>Instagram</h3>
+          <p>@thrillstech</p>
+        </div>
+        <div class="social-arrow">↗</div>
+        </div>
+      </div>
+
+      <div class="social-card">
+        <div class="social-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+        <div class="card-mid">
+        <div class="social-content">
+          <h3>LinkedIn</h3>
+          <p>Thrills Technologies</p>
+        </div>
+        <div class="social-arrow">↗</div>
+        </div>
+      </div>
+
+      <div class="social-card">
+        <div class="card-mid">
+        <div class="social-icon"><i class="fa-brands fa-x-twitter"></i></div>
+        <div class="social-content">
+          <h3>X (Twitter)</h3>
+          <p>@thrillstech</p>
+        </div>
+        <div class="social-arrow">↗</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
 <?php include 'includes/footer.php'; ?>
