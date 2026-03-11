@@ -355,3 +355,129 @@
 
 }
 
+
+
+/*-------------------------------
+ ABOUT US SECTION - MOBILE RESPONSIVE 
+ ------------------------------- */
+
+@media (max-width:768px){
+
+.about-page-hero{
+height:300px;
+}
+
+.about-hero-content h1{
+font-size:40px;
+}
+
+.breadcrumb{
+font-size:14px;
+}
+
+}
+
+
+/* who we are section */
+
+@media (max-width:992px){
+
+.who-grid{
+grid-template-columns:1fr;
+}
+
+.who-cards{
+grid-template-columns:1fr;
+}
+
+.who-left h2{
+font-size:36px;
+}
+
+}
+
+/* Timeline section */
+
+@media (max-width:768px){
+
+.timeline-title{
+font-size:36px;
+}
+
+.timeline-wrapper{
+max-width:100%;
+}
+
+.timeline-item{
+padding-left:60px;
+}
+
+.timeline-dot{
+left:6px;
+}
+
+}
+
+/* Mission section */
+
+@media(max-width:900px){
+
+.mission-grid{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.mission-left h2{
+font-size:36px;
+}
+
+.mission-3d{
+display:none;
+}
+
+}
+
+/* APPRPACH SECTION */
+
+@media(max-width:900px){
+
+.approach-header{
+flex-direction:column;
+gap:30px;
+}
+
+.approach-left h2{
+font-size:36px;
+}
+
+.approach-cards{
+grid-template-columns:1fr;
+}
+
+}
+
+
+/* =============================
+DIGITAL INNOVATION SECTION
+============================= */
+
+@media(max-width:900px){
+
+.innovation-wrapper{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.innovation-content h2{
+font-size:34px;
+}
+
+.innovation-stats{
+grid-template-columns:1fr;
+}
+
+.innovation-media img{
+width:100%;
+}
+
+}
