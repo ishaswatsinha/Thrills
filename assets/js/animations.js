@@ -316,6 +316,30 @@ tilt.style.transform=
 }
 
 
+// TEAM SECTION
+
+// gsap.from(".team-header",{
+// scrollTrigger:{
+// trigger:".team-section",
+// start:"top 80%"
+// },
+// y:60,
+// opacity:0,
+// duration:1
+// });
+
+// gsap.from(".team-card",{
+// scrollTrigger:{
+// trigger:".team-section",
+// start:"top 75%"
+// },
+// y:80,
+// opacity:0,
+// stagger:.2,
+// duration:1,
+// ease:"power3.out"
+// });
+
 // =====================================
 // FINAL REFRESH
 // =====================================

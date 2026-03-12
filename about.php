@@ -668,4 +668,177 @@ packages and custom enterprise solutions.
 
 </section>
 
+
+<section class="team-section">
+
+<div class="team-grid-bg"></div>
+
+<div class="team-container">
+
+<div class="team-header">
+
+<span class="section-tag">✦ OUR TEAM</span>
+
+<h2>
+Meet the people behind <span>Thrills</span>
+</h2>
+
+<p>
+Innovators, designers and engineers building intelligent
+digital products.
+</p>
+
+</div>
+
+
+<div class="team-grid">
+
+<!-- TEAM MEMBER -->
+
+<div class="team-card"
+data-name="Roushan Verma"
+data-role="Founder & CEO"
+data-img="assets/images/roushan-verma.jpeg"
+data-bio="Roushan Verma leads Thrills Technologies with expertise in AI systems, scalable web platforms, and digital innovation."
+data-email="rahul@thrills.tech"
+data-phone="+91 8500992222"
+data-linkedin="#"
+data-twitter="#">
+
+<div class="spotlight"></div>
+
+<div class="team-img">
+<img src="assets/images/roushan-verma.jpeg">
+</div>
+
+<div class="team-info">
+
+<h3>Roushan Verma</h3>
+<span>Founder & CEO</span>
+
+<div class="team-social">
+<a href="#">in</a>
+<a href="#">tw</a>
+<a href="#">ig</a>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="team-card"
+data-name="Ritika Kumari"
+data-role="Chief Creative Officer (CCO)"
+data-img="assets/images/ritika-kumari.jpg"
+data-bio="Ritika Kumari is the Chief Creative Officer at Thrills Technologies, bringing a wealth of experience in design and creative strategy."
+data-email="ritika@thrills.tech"
+data-phone="+91 8500992222"
+data-linkedin="#"
+data-twitter="#">
+<div class="spotlight"></div>
+
+<div class="team-img">
+<img src="assets/images/ritika-kumari.jpg">
+</div>
+
+<div class="team-info">
+
+<h3>Ritika Kumari</h3>
+<span>Chief Creative Officer (CCO)</span>
+
+<div class="team-social">
+<a href="#">in</a>
+<a href="#">tw</a>
+<a href="#">ig</a>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="team-card"
+data-name="Ruby Kumari"
+data-role="Chief Marketing Officer (CMO)"
+data-img="assets/images/ruby-kumari.jpg"
+data-bio="Ruby Kumari is the Chief Marketing Officer at Thrills Technologies, bringing a wealth of experience in digital marketing and brand strategy."
+data-email="ruby@thrills.tech"
+data-phone="+91 8500992222"
+data-linkedin="#"
+data-twitter="#">
+
+<div class="spotlight"></div>
+
+<div class="team-img">
+<img src="assets/images/ruby-kumari.jpg">
+</div>
+
+<div class="team-info">
+
+<h3>Ruby Kumari</h3>
+<span>Chief Marketing Officer (CMO)</span>
+
+<div class="team-social">
+<a href="#">in</a>
+<a href="#">tw</a>
+<a href="#">ig</a>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+</div>
+</div>
+</section>
+
+<!-- Modal HTML -->
+
+<div class="team-modal">
+
+<div class="team-modal-overlay"></div>
+
+<div class="team-modal-content">
+
+<button class="modal-close">✕</button>
+
+<div class="modal-grid">
+
+<div class="modal-image">
+<img id="modal-img">
+</div>
+
+<div class="modal-info">
+
+<h2 id="modal-name"></h2>
+<span id="modal-role"></span>
+
+<p id="modal-bio"></p>
+
+<div class="modal-contact">
+
+<p>Email: <a id="modal-email"></a></p>
+<p>Phone: <a id="modal-phone"></a></p>
+
+</div>
+
+<div class="modal-social">
+
+<a id="modal-linkedin">LinkedIn</a>
+<a id="modal-twitter">Twitter</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+
 <?php include 'includes/footer.php'; ?>

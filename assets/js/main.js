@@ -273,3 +273,135 @@ icon.textContent = item.classList.contains("active") ? "−" : "+";
 });
 
 });
+
+
+// ======================
+// TEAM CARD 3D TILT
+// ======================
+
+document.querySelectorAll(".team-card").forEach(card=>{
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect=card.getBoundingClientRect();
+
+const x=e.clientX-rect.left;
+const y=e.clientY-rect.top;
+
+const centerX=rect.width/2;
+const centerY=rect.height/2;
+
+const rotateX=(y-centerY)/15;
+const rotateY=(centerX-x)/15;
+
+card.style.transform=
+`rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+card.style.transform="rotateX(0) rotateY(0)";
+});
+
+});
+
+
+// ======================
+// CURSOR SPOTLIGHT
+// ======================
+
+document.querySelectorAll(".team-card").forEach(card=>{
+
+const light=card.querySelector(".spotlight");
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect=card.getBoundingClientRect();
+
+const x=e.clientX-rect.left;
+const y=e.clientY-rect.top;
+
+light.style.left=x-100+"px";
+light.style.top=y-100+"px";
+
+light.style.opacity=1;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+light.style.opacity=0;
+
+});
+
+});
+
+// MODAL LOGIC FOR TEAM CARDS
+
+const modal = document.querySelector(".team-modal");
+
+const modalImg = document.getElementById("modal-img");
+const modalName = document.getElementById("modal-name");
+const modalRole = document.getElementById("modal-role");
+const modalBio = document.getElementById("modal-bio");
+const modalEmail = document.getElementById("modal-email");
+const modalPhone = document.getElementById("modal-phone");
+const modalLinkedin = document.getElementById("modal-linkedin");
+const modalTwitter = document.getElementById("modal-twitter");
+
+document.querySelectorAll(".team-card").forEach(card => {
+
+card.addEventListener("click", () => {
+
+modalImg.src = card.dataset.img;
+modalName.textContent = card.dataset.name;
+modalRole.textContent = card.dataset.role;
+modalBio.textContent = card.dataset.bio;
+
+modalEmail.textContent = card.dataset.email;
+modalEmail.href = "mailto:" + card.dataset.email;
+
+modalPhone.textContent = card.dataset.phone;
+modalPhone.href = "tel:" + card.dataset.phone;
+
+modalLinkedin.href = card.dataset.linkedin;
+modalTwitter.href = card.dataset.twitter;
+
+openModal();
+
+});
+
+});
+
+function openModal(){
+
+gsap.to(modal,{
+autoAlpha:1,
+duration:.4
+});
+
+gsap.fromTo(".team-modal-content",
+{scale:.8,y:80},
+{scale:1,y:0,duration:.5,ease:"power3.out"}
+);
+
+}
+
+function closeModal(){
+
+gsap.to(modal,{
+autoAlpha:0,
+duration:.3
+});
+
+}
+
+document.querySelector(".modal-close")
+.addEventListener("click",closeModal);
+
+document.querySelector(".team-modal-overlay")
+.addEventListener("click",closeModal);
+
+document.addEventListener("keydown",(e)=>{
+if(e.key==="Escape") closeModal();
+});

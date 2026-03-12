@@ -3260,3 +3260,344 @@ display:flex;
 align-items:center;
 justify-content:center;
 }
+
+
+
+/* =========================
+TEAM SECTION
+========================= */
+
+.team-section{
+padding:140px 0;
+background:#000;
+position:relative;
+overflow:hidden;
+}
+
+/* animated grid */
+
+.team-grid-bg{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+
+background-image:
+linear-gradient(rgba(255,0,0,.05) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,0,0,.05) 1px,transparent 1px);
+
+background-size:70px 70px;
+
+animation:gridMove 20s linear infinite;
+
+z-index:0;
+}
+
+@keyframes gridMove{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(70px);
+}
+
+}
+
+
+/* container */
+
+.team-container{
+width:85%;
+margin:auto;
+position:relative;
+z-index:2;
+}
+
+/* header */
+
+.team-header{
+text-align:center;
+max-width:700px;
+margin:auto;
+margin-bottom:90px;
+}
+
+.section-tag{
+color:#ff2b2b;
+letter-spacing:2px;
+font-size:13px;
+}
+
+.team-header h2{
+font-size:44px;
+margin:20px 0;
+}
+
+.team-header span{
+color:#ff2b2b;
+}
+
+.team-header p{
+color:#9ca3af;
+line-height:1.7;
+}
+
+
+/* grid */
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(3,280px);
+justify-content:center;
+gap:40px;
+}
+
+/* Tablet */
+
+@media(max-width:1000px){
+.team-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+.team-grid{
+grid-template-columns:1fr;
+}
+}
+
+
+/* CARD */
+
+.team-card{
+
+position:relative;
+
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:22px;
+
+overflow:hidden;
+
+transition:.4s ease;
+
+transform-style:preserve-3d;
+}
+
+.team-card:hover{
+
+border-color:#ff2b2b;
+
+box-shadow:
+0 30px 80px rgba(255,0,0,.25);
+
+}
+
+
+/* spotlight */
+
+.spotlight{
+position:absolute;
+
+width:200px;
+height:200px;
+
+background:radial-gradient(circle,#ff0000,transparent 70%);
+
+opacity:0;
+
+pointer-events:none;
+
+transition:.2s;
+
+mix-blend-mode:screen;
+}
+
+
+/* image */
+
+.team-img{
+height:260px;
+overflow:hidden;
+}
+
+.team-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s ease;
+}
+
+.team-card:hover img{
+transform:scale(1.08);
+}
+
+
+/* info */
+
+.team-info{
+padding:24px;
+}
+
+.team-info h3{
+font-size:20px;
+margin-bottom:5px;
+}
+
+.team-info span{
+color:#ff2b2b;
+font-size:14px;
+}
+
+
+/* socials */
+
+.team-social{
+display:flex;
+gap:10px;
+margin-top:14px;
+}
+
+.team-social a{
+
+width:32px;
+height:32px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+border:1px solid rgba(255,255,255,.2);
+
+font-size:12px;
+
+transition:.3s ease;
+}
+
+.team-social a:hover{
+
+background:#ff2b2b;
+border-color:#ff2b2b;
+
+}
+
+
+/* Modal Css  */
+
+.team-modal{
+position:fixed;
+inset:0;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+visibility:hidden;
+opacity:0;
+
+z-index:9999;
+}
+
+/* overlay */
+
+.team-modal-overlay{
+position:absolute;
+inset:0;
+
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(10px);
+}
+
+/* modal box */
+
+.team-modal-content{
+
+background:#0a0a0a;
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
+
+width:850px;
+max-width:90%;
+
+padding:50px;
+
+position:relative;
+
+transform:scale(.9);
+
+}
+
+/* close */
+
+.modal-close{
+position:absolute;
+top:20px;
+right:20px;
+
+background:#ff2b2b;
+border:none;
+
+width:35px;
+height:35px;
+
+border-radius:50%;
+cursor:pointer;
+}
+
+/* grid */
+
+.modal-grid{
+display:grid;
+grid-template-columns:300px 1fr;
+gap:40px;
+align-items:center;
+}
+
+.modal-image img{
+width:100%;
+border-radius:15px;
+}
+
+.modal-info h2{
+font-size:32px;
+margin-bottom:5px;
+}
+
+.modal-info span{
+color:#ff2b2b;
+display:block;
+margin-bottom:20px;
+}
+
+.modal-info p{
+color:#9ca3af;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+/* socials */
+
+.modal-social{
+display:flex;
+gap:10px;
+}
+
+.modal-social a{
+padding:8px 16px;
+border:1px solid rgba(255,255,255,.2);
+border-radius:30px;
+transition:.3s;
+}
+
+.modal-social a:hover{
+background:#ff2b2b;
+}
