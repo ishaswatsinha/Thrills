@@ -493,4 +493,179 @@ APPROACH SECTION
 
 </section>
 
+<!-- =====================================
+PARTNERS SECTION
+=====================================  -->
+
+<section class="partners-section">
+
+<div class="partners-container">
+
+<div class="partners-grid">
+
+<!-- LEFT CONTENT -->
+
+<div class="partners-left">
+
+<span class="section-label">✱ EXECUTIVE PARTNERS</span>
+
+<h2>
+100+ <span>partners</span> &<br>
+supporters
+</h2>
+
+</div>
+
+
+<!-- PARTNER LOGOS -->
+
+<div class="partners-logos">
+
+<div class="partner-card">
+<img src="assets/images/partners/logo1.svg" alt="">
+<span>Logoipsum</span>
+</div>
+
+<div class="partner-card">
+<img src="assets/images/partners/logo2.svg" alt="">
+<span>Logoipsum</span>
+</div>
+
+<div class="partner-card">
+<img src="assets/images/partners/logo3.svg" alt="">
+<span>Logoipsum</span>
+</div>
+
+<div class="partner-card">
+<img src="assets/images/partners/logo4.svg" alt="">
+<span>Logoipsum</span>
+</div>
+
+<div class="partner-card">
+<img src="assets/images/partners/logo5.svg" alt="">
+<span>Logoipsum</span>
+</div>
+
+<div class="partner-card">
+<img src="assets/images/partners/logo6.svg" alt="">
+<span>Logoipsum</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- /* =========================
+FAQ SECTION
+========================= */ -->
+
+<section class="faq-section">
+
+<div class="faq-container">
+
+<div class="faq-grid">
+
+<!-- LEFT IMAGE SIDE -->
+
+<div class="faq-images">
+
+<img src="assets/images/ritika-kumari.jpg" class="faq-img main-img">
+<img src="assets/images/roushan-verma.jpeg" class="faq-img floating-img">
+
+<a href="tel:+918500992222" class="faq-call">
+<span class="call-icon">📞</span>
+<span class="call-text">+91 8500 992 222</span>
+</a>
+
+</div>
+
+
+<!-- RIGHT FAQ -->
+
+<div class="faq-content">
+
+<span class="section-label">✱ HAVE ANY QUESTIONS?</span>
+
+<h2>
+Let us address your <span>queries</span><br>
+today!
+</h2>
+
+<div class="faq-accordion">
+
+<div class="faq-item active">
+<button class="faq-question">
+What services does Thrills Technologies offer?
+<span class="faq-icon">−</span>
+</button>
+
+<div class="faq-answer">
+We provide services including Web Development, UI/UX Design,
+SEO Optimization, AI Integration, and Digital Product
+Development.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+How long does it take to complete a project?
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+Project timelines depend on complexity, but most projects
+are delivered within 2–8 weeks.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Do you work with startups and small businesses?
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+Yes, we work with startups, SMEs, and enterprises
+to deliver scalable digital solutions.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Can you improve existing websites?
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+Yes. We redesign, optimize performance,
+and add modern functionality to existing websites.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+What is your pricing model?
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+Pricing depends on project scope. We offer flexible
+packages and custom enterprise solutions.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <?php include 'includes/footer.php'; ?>

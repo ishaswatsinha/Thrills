@@ -481,3 +481,57 @@ width:100%;
 }
 
 }
+
+
+/* =====================================
+PARTNERS SECTION
+===================================== */
+
+
+@media(max-width:900px){
+
+.partners-grid{
+grid-template-columns:1fr;
+gap:50px;
+padding:50px;
+}
+
+.partners-left h2{
+font-size:36px;
+}
+
+.partners-logos{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:500px){
+
+.partners-logos{
+grid-template-columns:1fr;
+}
+
+}
+
+
+/* =====================================
+FAQ SECTION
+===================================== */
+
+
+@media(max-width:900px){
+
+.faq-grid{
+grid-template-columns:1fr;
+}
+
+.floating-img{
+display:none;
+}
+
+.faq-content h2{
+font-size:34px;
+}
+
+}

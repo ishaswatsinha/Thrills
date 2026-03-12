@@ -242,3 +242,34 @@ window.addEventListener("load", () => {
     .to({}, { duration: 2 });
 
 });
+
+
+
+/* =========================
+FAQ SECTION
+========================= */
+
+document.querySelectorAll(".faq-question").forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+const item = btn.parentElement;
+
+document.querySelectorAll(".faq-item").forEach(el => {
+
+if(el !== item){
+el.classList.remove("active");
+el.querySelector(".faq-icon").textContent="+";
+}
+
+});
+
+item.classList.toggle("active");
+
+const icon = item.querySelector(".faq-icon");
+
+icon.textContent = item.classList.contains("active") ? "−" : "+";
+
+});
+
+});

@@ -5,70 +5,65 @@
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({
-  toggleActions: "play none none reverse"
+  toggleActions: "play none none reverse",
+  markers: false
 });
 
 document.addEventListener("DOMContentLoaded", () => {
 
+const ctx = gsap.context(() => {
 
 // =====================================
 // PAGE TRANSITION
 // =====================================
 
-gsap.to(".page-transition", {
-  scaleY: 0,
-  duration: 1.2,
-  ease: "power4.inOut",
-  transformOrigin: "top"
+if(document.querySelector(".page-transition")){
+gsap.to(".page-transition",{
+scaleY:0,
+duration:1.2,
+ease:"power4.inOut",
+transformOrigin:"top"
 });
+}
 
 
 // =====================================
 // HERO ANIMATION
 // =====================================
 
+if(document.querySelector(".hero-title")){
+
 const heroTL = gsap.timeline({defaults:{ease:"power3.out"}});
 
 heroTL
-.from(".hero-title",{
-  y:80,
-  opacity:0,
-  duration:1
-})
-.from(".hero-subtitle",{
-  y:40,
-  opacity:0,
-  duration:.8
-},"-=0.6")
-.from(".hero-buttons a",{
-  y:20,
-  opacity:0,
-  stagger:.2,
-  duration:.6
-},"-=0.4");
+.from(".hero-title",{y:80,opacity:0,duration:1})
+.from(".hero-subtitle",{y:40,opacity:0,duration:.8},"-=0.6")
+.from(".hero-buttons a",{y:20,opacity:0,stagger:.2,duration:.6},"-=0.4");
+
+}
 
 
 // =====================================
-// GLOBAL SECTION TEXT REVEAL
+// GLOBAL SECTION REVEAL
 // =====================================
 
-gsap.utils.toArray("section").forEach(section => {
+gsap.utils.toArray("section").forEach(section=>{
 
 if(section.classList.contains("hero")) return;
 
-const elements = section.querySelectorAll("h2, p");
+const targets = section.querySelectorAll("h2,p");
 
-if(!elements.length) return;
+if(!targets.length) return;
 
-gsap.from(elements,{
+gsap.from(targets,{
 scrollTrigger:{
 trigger:section,
 start:"top 85%"
 },
-y:50,
+y:40,
 opacity:0,
-stagger:.15,
-duration:.8,
+stagger:.12,
+duration:.7,
 ease:"power3.out"
 });
 
@@ -79,7 +74,7 @@ ease:"power3.out"
 // COUNTER ANIMATION
 // =====================================
 
-gsap.utils.toArray(".counter").forEach(counter => {
+gsap.utils.toArray(".counter").forEach(counter=>{
 
 const target = +counter.dataset.target;
 
@@ -90,7 +85,7 @@ snap:{innerText:1},
 ease:"power2.out",
 scrollTrigger:{
 trigger:counter,
-start:"top 85%"
+start:"top 90%"
 }
 });
 
@@ -127,18 +122,17 @@ scrollTrigger:{
 trigger:".timeline-premium",
 start:"top 80%"
 },
-y:60,
+y:50,
 opacity:0,
-stagger:.25,
-duration:1,
-ease:"power3.out"
+stagger:.2,
+duration:.9
 });
 
 gsap.to(".timeline-dot",{
-scale:1.3,
+scale:1.2,
 repeat:-1,
 yoyo:true,
-duration:1.4,
+duration:1.2,
 ease:"sine.inOut"
 });
 
@@ -149,40 +143,36 @@ ease:"sine.inOut"
 // SERVICE CARDS
 // =====================================
 
-gsap.utils.toArray(".service-card-v2").forEach(card => {
+gsap.utils.toArray(".service-card-v2").forEach(card=>{
 
 gsap.from(card,{
 scrollTrigger:{
 trigger:card,
 start:"top 90%"
 },
-y:50,
+y:40,
 opacity:0,
-duration:.8
+duration:.7
 });
 
 });
 
 
 // =====================================
-// WHY THRILLS SECTION
+// WHY THRILLS
 // =====================================
 
 if(document.querySelector(".why-ai")){
 
-gsap.utils.toArray(".why-ai-left > *").forEach((el,i)=>{
-
-gsap.from(el,{
+gsap.from(".why-ai-left > *",{
 scrollTrigger:{
 trigger:".why-ai",
 start:"top 80%"
 },
 y:40,
 opacity:0,
-delay:i*0.1,
+stagger:.12,
 duration:.8
-});
-
 });
 
 gsap.from(".why-ai-image",{
@@ -190,9 +180,9 @@ scrollTrigger:{
 trigger:".why-ai",
 start:"top 80%"
 },
-x:80,
+x:60,
 opacity:0,
-duration:1
+duration:.9
 });
 
 }
@@ -205,7 +195,7 @@ duration:1
 if(document.querySelector(".about-hero")){
 
 gsap.from(".about-hero-content h1",{
-y:60,
+y:50,
 opacity:0,
 duration:1
 });
@@ -214,7 +204,7 @@ gsap.from(".breadcrumb",{
 y:20,
 opacity:0,
 delay:.3,
-duration:.8
+duration:.7
 });
 
 }
@@ -233,7 +223,7 @@ start:"top 80%"
 },
 x:-80,
 opacity:0,
-duration:1
+duration:.9
 });
 
 gsap.from(".mission-item",{
@@ -241,50 +231,50 @@ scrollTrigger:{
 trigger:".about-mission",
 start:"top 80%"
 },
-y:60,
+y:50,
 opacity:0,
-stagger:.25,
-duration:1
+stagger:.2,
+duration:.9
 });
 
 gsap.to(".mission-dot",{
-scale:1.4,
+scale:1.3,
 repeat:-1,
 yoyo:true,
-duration:1.4
+duration:1.2
 });
 
 }
 
 
 // =====================================
-// APPROACH SECTION
+// FAQ SECTION
 // =====================================
 
-// if(document.querySelector(".approach-section")){
+if(document.querySelector(".faq-section")){
 
-// gsap.from(".approach-header",{
-// scrollTrigger:{
-// trigger:".approach-section",
-// start:"top 80%"
-// },
-// y:60,
-// opacity:0,
-// duration:1
-// });
+gsap.from(".faq-images",{
+scrollTrigger:{
+trigger:".faq-section",
+start:"top 80%"
+},
+x:-70,
+opacity:0,
+duration:.9
+});
 
-// gsap.from(".approach-card",{
-// scrollTrigger:{
-// trigger:".approach-section",
-// start:"top 80%"
-// },
-// y:70,
-// opacity:0,
-// stagger:.2,
-// duration:1
-// });
+gsap.from(".faq-item",{
+scrollTrigger:{
+trigger:".faq-section",
+start:"top 80%"
+},
+y:40,
+opacity:0,
+stagger:.12,
+duration:.8
+});
 
-// }
+}
 
 
 // =====================================
@@ -307,8 +297,10 @@ ty=((e.clientY-rect.top)/rect.height-.5)*-8;
 });
 
 tilt.addEventListener("mouseleave",()=>{
+
 tx=0;
 ty=0;
+
 });
 
 gsap.ticker.add(()=>{
@@ -324,12 +316,12 @@ tilt.style.transform=
 }
 
 
-
-
 // =====================================
 // FINAL REFRESH
 // =====================================
 
 ScrollTrigger.refresh();
+
+}); // end context
 
 });
